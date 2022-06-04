@@ -9,9 +9,21 @@ import SwiftUI
 
 
 struct AwardsView: View {
+    let awards = Award.getAwards().filter { $0.awarded }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+          NavigationView {
+              CustomGridView(items: awards, columns: 2) { itemSize, award in
+                  VStack {
+                      award.awardView
+                      Text(award.title)
+                  }
+                  .padding()
+                  .frame(width: itemSize, height: itemSize)
+              }
+              .navigationBarTitle("Your awards: \(awards.count)")
+          }
+      }
 }
 
 struct AwardsView_Previews: PreviewProvider {
