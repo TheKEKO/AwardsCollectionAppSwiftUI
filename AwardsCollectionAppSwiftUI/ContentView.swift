@@ -10,8 +10,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView {
+            AwardsView()
+                .tabItem {
+                    Image(systemName: "pencil.and.outline")
+                    Text("Awards")
+                }
+        }
     }
 }
 
