@@ -8,14 +8,49 @@
 import SwiftUI
 
 
-struct CustomGridView: View {
+
+struct CustomGridView<Content: View, T>: View {
+    let items: [T]
+    let columns: Int
+    let content: (CGFloat, T) -> Content
+    var rows: Int {
+        items.count / columns
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { geometry in
+            let sideLength = geometry.size.width / CGFloat(columns)
+            
+            ScrollView {
+                VStack {
+                    ForEach(0...rows, id: \.self) { rowIndex in
+                        HStack {
+                            ForEach(0..<columns, id: \.self) { columnIndex in
+                                if let index = getIndexFor(row: rowIndex, column: columnIndex) {
+                                    content(sideLength, items[index])
+                                } else {
+                                    Spacer()
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    private func getIndexFor(row: Int, column: Int) -> Int? {
+        let index = row * columns + column
+        return index < items.count ? index : nil
     }
 }
 
 struct CustomGridView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomGridView()
+        CustomGridView(items: [1, 2, 3, 4, 5, 6, 7], columns: 3) { itemSize, item  in
+                    Text("\(item)")
+                .padding()
+                .frame(width: itemSize, height: itemSize)
+        }
     }
 }
