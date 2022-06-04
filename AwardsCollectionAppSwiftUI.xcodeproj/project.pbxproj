@@ -46,6 +46,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D45EA0E8284BFBFB0031921B /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				D45EA0E0284BFBA00031921B /* GradientRectangles.swift */,
+				D45EA0E2284BFBB00031921B /* PathView.swift */,
+				D45EA0E4284BFBBF0031921B /* CurvesView.swift */,
+				D45EA0E6284BFBCA0031921B /* HypocycloidView.swift */,
+			);
+			path = Awards;
+			sourceTree = "<group>";
+		};
 		D461F172284A58550033AB22 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +81,7 @@
 				D461F18C284A62B70033AB22 /* AwardsView.swift */,
 				D461F191284A639B0033AB22 /* CustomGridView.swift */,
 				D461F190284A62FC0033AB22 /* Models */,
+				D45EA0E8284BFBFB0031921B /* Awards */,
 				D461F182284A58570033AB22 /* Assets.xcassets */,
 				D461F184284A58570033AB22 /* Preview Content */,
 			);
@@ -88,10 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				D461F18E284A62E00033AB22 /* Award.swift */,
-				D45EA0E0284BFBA00031921B /* GradientRectangles.swift */,
-				D45EA0E2284BFBB00031921B /* PathView.swift */,
-				D45EA0E4284BFBBF0031921B /* CurvesView.swift */,
-				D45EA0E6284BFBCA0031921B /* HypocycloidView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
