@@ -12,7 +12,6 @@
 		D45EA0E5284BFBBF0031921B /* CurvesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45EA0E4284BFBBF0031921B /* CurvesView.swift */; };
 		D45EA0E7284BFBCA0031921B /* HypocycloidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45EA0E6284BFBCA0031921B /* HypocycloidView.swift */; };
 		D461F17F284A58550033AB22 /* AwardsCollectionAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461F17E284A58550033AB22 /* AwardsCollectionAppSwiftUIApp.swift */; };
-		D461F181284A58550033AB22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461F180284A58550033AB22 /* ContentView.swift */; };
 		D461F183284A58570033AB22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D461F182284A58570033AB22 /* Assets.xcassets */; };
 		D461F186284A58570033AB22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D461F185284A58570033AB22 /* Preview Assets.xcassets */; };
 		D461F18D284A62B70033AB22 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461F18C284A62B70033AB22 /* AwardsView.swift */; };
@@ -27,7 +26,6 @@
 		D45EA0E6284BFBCA0031921B /* HypocycloidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypocycloidView.swift; sourceTree = "<group>"; };
 		D461F17B284A58550033AB22 /* AwardsCollectionAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwardsCollectionAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D461F17E284A58550033AB22 /* AwardsCollectionAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsCollectionAppSwiftUIApp.swift; sourceTree = "<group>"; };
-		D461F180284A58550033AB22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D461F182284A58570033AB22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D461F185284A58570033AB22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D461F18C284A62B70033AB22 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				D461F17E284A58550033AB22 /* AwardsCollectionAppSwiftUIApp.swift */,
-				D461F180284A58550033AB22 /* ContentView.swift */,
 				D461F18C284A62B70033AB22 /* AwardsView.swift */,
 				D461F191284A639B0033AB22 /* CustomGridView.swift */,
 				D461F190284A62FC0033AB22 /* Models */,
@@ -174,7 +171,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D461F181284A58550033AB22 /* ContentView.swift in Sources */,
 				D461F18F284A62E00033AB22 /* Award.swift in Sources */,
 				D461F17F284A58550033AB22 /* AwardsCollectionAppSwiftUIApp.swift in Sources */,
 				D45EA0E3284BFBB00031921B /* PathView.swift in Sources */,

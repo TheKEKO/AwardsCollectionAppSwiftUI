@@ -11,7 +11,7 @@ import SwiftUI
 struct AwardsCollectionAppSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AwardsView()
         }
     }
 }
