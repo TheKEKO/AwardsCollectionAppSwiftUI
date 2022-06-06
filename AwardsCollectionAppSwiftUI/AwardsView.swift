@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct AwardsView: View {
     let awards = Award.getAwards().filter { $0.awarded }
     
