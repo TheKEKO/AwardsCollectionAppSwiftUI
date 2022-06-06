@@ -19,15 +19,14 @@ struct CustomGridView<Content: View, T>: View {
     
     var body: some View {
         GeometryReader { geometry in
-            let sideLength = geometry.size.width / CGFloat(columns)
-            
+            let itemSize = geometry.size.width / CGFloat(columns)
             ScrollView {
                 VStack {
                     ForEach(0...rows, id: \.self) { rowIndex in
                         HStack {
                             ForEach(0..<columns, id: \.self) { columnIndex in
-                                if let index = getIndexFor(row: rowIndex, column: columnIndex) {
-                                    content(sideLength, items[index])
+                                if let index = indexFor(row: rowIndex, column: columnIndex) {
+                                    content(itemSize, items[index])
                                 } else {
                                     Spacer()
                                 }
@@ -39,7 +38,7 @@ struct CustomGridView<Content: View, T>: View {
         }
     }
     
-    private func getIndexFor(row: Int, column: Int) -> Int? {
+    private func indexFor(row: Int, column: Int) -> Int? {
         let index = row * columns + column
         return index < items.count ? index : nil
     }
@@ -47,9 +46,8 @@ struct CustomGridView<Content: View, T>: View {
 
 struct CustomGridView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomGridView(items: [1, 2, 3, 4, 5, 6, 7], columns: 3) { itemSize, item  in
-                    Text("\(item)")
-                .padding()
+        CustomGridView(items: [1, 2, 3, 4, 5, 6, 7], columns: 3) { itemSize, item in
+            Text("\(item)")
                 .frame(width: itemSize, height: itemSize)
         }
     }
