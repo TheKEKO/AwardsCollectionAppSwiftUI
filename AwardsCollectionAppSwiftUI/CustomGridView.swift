@@ -8,7 +8,6 @@
 import SwiftUI
 
 
-
 struct CustomGridView<Content: View, T>: View {
     let items: [T]
     let columns: Int
